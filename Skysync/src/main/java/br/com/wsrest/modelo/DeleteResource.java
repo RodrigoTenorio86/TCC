@@ -7,9 +7,7 @@ import javax.ws.rs.FormParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.ResponseBuilder;
 
 @Path("/delete")
 public class DeleteResource {
@@ -24,7 +22,7 @@ public class DeleteResource {
 	}
 
 	@DELETE
-	@Produces(MediaType.TEXT_HTML)
+	@Produces("text/html")
 	public Response deleteFile(String uri) {
 		String msg;
 		uri = CAMINHO_PASTA + uri;
