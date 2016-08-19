@@ -18,21 +18,24 @@ public class DownloadResource {
 	private File file;
 	private ResponseBuilder response;
 	private final static String CAMINHO_PASTA = "C:/Users/RodrigoTenorio/";
-	
+
+	/**
+	 * @Path = Caminho para acessar o método via http 
+	 * @Produces("/*")=Determinamos o media types que vamos usar para receber a resposta
+	 * @FormParam captura de HTML.
+	 * @FormParam fileName
+	 */
 	@POST
 	@Path("/resource")
 	@Produces("*/*")
-	public Response getParamento(@FormParam("fileName") String fileName){
+	public Response getParamento(@FormParam("fileName") String fileName) {
 		return this.getResource(fileName);
 	}
 
 	/**
-	 * DOWNLOAD de Arquivos.
-	 *
-	 * @GET = Método HTTP
-	 * @Path = Caminho para acessar o método via http 
+	 * DOWNLOAD de Arquivos. 
 	 * @Produces("/*") =Determinamos o media types que vamos usar para receber a resposta
-	 * @FormParam fileName
+	 * @GET = Método HTTP
 	 * @return
 	 */
 	@GET
