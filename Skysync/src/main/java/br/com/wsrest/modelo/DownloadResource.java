@@ -40,7 +40,7 @@ public class DownloadResource {
 	 */
 	@GET
 	@Produces("*/*")
-	public Response getResource(String uri) {
+	private Response getResource(String uri) {
 		uri = CAMINHO_PASTA + uri;
 		this.file = new File(uri);
 		this.response = Response.ok((Object) file);
