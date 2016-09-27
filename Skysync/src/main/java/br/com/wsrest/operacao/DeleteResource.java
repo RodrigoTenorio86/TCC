@@ -1,4 +1,4 @@
-package br.com.wsrest.modelo;
+package br.com.wsrest.operacao;
 
 import java.io.File;
 
@@ -18,17 +18,17 @@ public class DeleteResource {
 	@POST
 	@Path("/resourceDelete")
 	public Response getParamento(@FormParam("fileName") String fileName) {
+		fileName=CAMINHO_PASTA+fileName;
 		return this.deleteFile(fileName);
 	}
 
 	@DELETE
 	@Produces("text/html")
-	public Response deleteFile(String uri) {
+	private Response deleteFile(String uri) {
 		String msg;
-		uri = CAMINHO_PASTA + uri;
 		this.file = new File(uri);
-		if (this.file.delete())	msg = "Sucesso";
-		else msg = "francasso";
-		return response.status(200).entity("<html>"+"<head>"+msg+"</head>"+"</html>").build();
+		if (this.file.delete())	msg = "Sucesso Arquivo Excluido:"+uri;
+		else msg = "francasso.";
+		return response.status(200).entity("<html>"+"<body>"+msg+"</body>"+"</html>").build();
 	}
 }

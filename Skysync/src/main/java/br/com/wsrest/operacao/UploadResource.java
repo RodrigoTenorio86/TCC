@@ -2,7 +2,7 @@
  * @author RodrigoTenorio
  * data:12/08/2016
  */
-package br.com.wsrest.modelo;
+package br.com.wsrest.operacao;
 
 import java.io.File;
 import java.io.FileOutputStream;

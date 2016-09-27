@@ -1,4 +1,4 @@
-package br.com.wsrest.modelo;
+package br.com.wsrest.operacao;
 
 import java.io.File;
 import java.io.FileOutputStream;

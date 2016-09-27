@@ -1,7 +1,7 @@
 /**
  * @author RodrigoTenorio
  */
-package br.com.wsrest.modelo;
+package br.com.wsrest.operacao;
 
 import java.io.File;
 
@@ -29,6 +29,7 @@ public class DownloadResource {
 	@Path("/resource")
 	@Produces("*/*")
 	public Response getParamento(@FormParam("fileName") String fileName) {
+		fileName=CAMINHO_PASTA+fileName;
 		return this.getResource(fileName);
 	}
 
@@ -40,8 +41,7 @@ public class DownloadResource {
 	 */
 	@GET
 	@Produces("*/*")
-	private Response getResource(String uri) {
-		uri = CAMINHO_PASTA + uri;
+	public Response getResource(String uri) {
 		this.file = new File(uri);
 		this.response = Response.ok((Object) file);
 		response.header("Content-Disposition", "attachment;filename=" + file.getName());
