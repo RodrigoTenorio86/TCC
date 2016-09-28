@@ -13,12 +13,12 @@ import javax.ws.rs.core.Response;
 public class DeleteResource {
 	private File file;
 	private Response response;
-	private final static String CAMINHO_PASTA = "C:/Users/RodrigoTenorio/";
+	//private final static String CAMINHO_PASTA = "C:/Users/RodrigoTenorio/";
 
 	@POST
 	@Path("/resourceDelete")
 	public Response getParamento(@FormParam("fileName") String fileName) {
-		fileName=CAMINHO_PASTA+fileName;
+		//fileName=CAMINHO_PASTA+fileName;
 		return this.deleteFile(fileName);
 	}
 

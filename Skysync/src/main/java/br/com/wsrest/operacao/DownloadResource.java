@@ -17,7 +17,7 @@ import javax.ws.rs.core.Response.ResponseBuilder;
 public class DownloadResource {
 	private File file;
 	private ResponseBuilder response;
-	private final static String CAMINHO_PASTA = "C:/Users/RodrigoTenorio/";
+	//private final static String CAMINHO_PASTA = "C:/Users/RodrigoTenorio/";
 
 	/**
 	 * @Path = Caminho para acessar o método via http 
@@ -29,7 +29,7 @@ public class DownloadResource {
 	@Path("/resource")
 	@Produces("*/*")
 	public Response getParamento(@FormParam("fileName") String fileName) {
-		fileName=CAMINHO_PASTA+fileName;
+		//fileName=CAMINHO_PASTA+fileName;
 		return this.getResource(fileName);
 	}
 
