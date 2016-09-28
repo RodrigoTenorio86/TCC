@@ -23,7 +23,7 @@
 			<!--O SERVLET-CLASS E O PARAM-NAME NÃO SÃO MODIFICADOS, BASTA COPIAR E 
 				COLAR.. POIS ESTÁ UTILIZANDO O SERVLET QUE VEM NA BIBLIOTECA DO JERSEY -->
 
-			<param-value>br.com.wsrest.modelo</param-value>
+			<param-value>br.com.wsrest.operacao</param-value>
 			<!--JÁ O PARAM-VALUE É O ENDEREÇO DO PACOTE ONDE SE ENCONTRA O SEU RECURSO -->
 		</init-param>
 		<load-on-startup>1</load-on-startup>
