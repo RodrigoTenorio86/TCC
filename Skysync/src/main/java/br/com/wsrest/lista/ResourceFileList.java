@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class ResourceFileList {
 	public Map<String, String> listResource = new HashMap<String, String>();
-	private final static String CAMINHO_PASTA = "C:/Users/RodrigoTenorio/";
+	private final static String CAMINHO_PASTA = "C:/Users/RodrigoTenorio/pastadeTeste";
 	private File file;
 	
 	
