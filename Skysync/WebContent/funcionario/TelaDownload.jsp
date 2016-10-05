@@ -5,12 +5,13 @@
 <html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<c:import url="cabecalho.jsp" />
+<c:import url="/cabecalho.jsp" />
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Download dos Arquivos</title>
 </head>
 <body>
+  Qual a Arquivos Deseja efetua Download:
 	<form action="rest/download/resource" method="post">
         <jsp:useBean id="dao" class="br.com.wsrest.lista.ResourceFileList"/>
         <c:forEach var="nameFile" items="${dao.getList()}">
@@ -21,5 +22,5 @@
 	</form>
 
 </body>
-<c:import url="rodape.jsp" />
+<c:import url="/rodape.jsp" />
 </html>

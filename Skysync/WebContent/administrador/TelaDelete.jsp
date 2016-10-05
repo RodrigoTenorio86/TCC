@@ -5,7 +5,7 @@
 <html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<c:import url="cabecalho.jsp" />
+<c:import url="/cabecalho.jsp" />
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Pagina de Exclusao do arquivos</title>
@@ -21,5 +21,5 @@
 	</form>
 
 </body>
-<c:import url="rodape.jsp" />
+<c:import url="/rodape.jsp" />
 </html>
