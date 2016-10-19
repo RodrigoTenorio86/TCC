@@ -1,3 +1,6 @@
+/**
+ * @author RodrigoTenorio
+ */
 package br.com.wsrest.modelo;
 
 public class Administrador {

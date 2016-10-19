@@ -1,3 +1,6 @@
+/**
+ * @author RodrigoTenorio
+ */
 package br.com.wsrest.lista;
 
 import java.io.File;
@@ -7,7 +10,7 @@ import java.util.Map;
 
 public class ResourceFileList {
 	public Map<String, String> listResource = new HashMap<String, String>();
-	private final static String CAMINHO_PASTA = "C:/Users/RodrigoTenorio/pastadeTeste";
+	private final static String CAMINHO_PASTA = "C:/Users/RodrigoTenorio/pastadeTeste/";
 	private File file;
 	
 	
