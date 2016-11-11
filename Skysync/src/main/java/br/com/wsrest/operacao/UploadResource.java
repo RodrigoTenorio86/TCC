@@ -24,33 +24,39 @@ public class UploadResource {
 
 	private final static String CAMINHO_PASTA = "C:/Users/RodrigoTenorio/pastadeTeste/";
 
+	/**
+	 * 
+	 * @param lerArray=para ler o arry de byte do arq.
+	 * @param fileDetail=obter o nome do arquivo ou cabeçalho detalhe 
+	 * @return
+	 */
 	@POST
 	@Path("/resource")
 	@Consumes(MediaType.MULTIPART_FORM_DATA)
-	public Response postResource(@FormDataParam("file") InputStream uploadedInputStream,
-			@FormDataParam("file") FormDataContentDisposition fileDetail) {
+	public Response postResource(@FormDataParam("file") InputStream lerArray,
+			                     @FormDataParam("file") FormDataContentDisposition detalheArq) {
 
-		String uploadedFileLocation = CAMINHO_PASTA + fileDetail.getFileName();
+		String uploadArquivoCaminho = CAMINHO_PASTA + detalheArq.getFileName();
 
-		// save it
-		writeToFile(uploadedInputStream, uploadedFileLocation);
+		
+		salvarLocalArquivo(lerArray, uploadArquivoCaminho);
 
-		String output = "File uploaded to : " + uploadedFileLocation;
+		String endereco = "Feito Upoload para : " + uploadArquivoCaminho;
 
-		return Response.status(200).entity(output).build();
+		return Response.status(200).entity(endereco).build();
 
 	}
 
-	// save uploaded file to new location
-	private void writeToFile(InputStream uploadedInputStream, String uploadedFileLocation) {
+	
+	private void salvarLocalArquivo(InputStream uploadEntrada, String uploadArquivoCaminho) {
 
 		try {
-			OutputStream out = new FileOutputStream(new File(uploadedFileLocation));
+			OutputStream out = new FileOutputStream(new File(uploadArquivoCaminho));
 			int read = 0;
 			byte[] bytes = new byte[1024];
 
-			out = new FileOutputStream(new File(uploadedFileLocation));
-			while ((read = uploadedInputStream.read(bytes)) != -1) {
+			out = new FileOutputStream(new File(uploadArquivoCaminho));
+			while ((read = uploadEntrada.read(bytes)) != -1) {
 				out.write(bytes, 0, read);
 			}
 			out.flush();
