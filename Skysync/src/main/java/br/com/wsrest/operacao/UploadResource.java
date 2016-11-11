@@ -22,7 +22,7 @@ import com.sun.jersey.multipart.FormDataParam;
 @Path("/upload")
 public class UploadResource {
 
-	private final static String CAMINHO_PASTA = "C:/Users/RodrigoTenorio/";
+	private final static String CAMINHO_PASTA = "C:/Users/RodrigoTenorio/pastadeTeste/";
 
 	@POST
 	@Path("/resource")
